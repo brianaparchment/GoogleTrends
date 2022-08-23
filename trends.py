@@ -6,3 +6,5 @@ from pytrends.request import TrendReq
 import matplotlib
 import matplotlib.pyplot as plt
 import requests
+
+pytrends = TrendReq(hl='en-US', timeout=5) #connect to google
