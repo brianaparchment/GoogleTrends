@@ -32,3 +32,12 @@ plt.style.use('fivethirtyeight')
 ax=plot_RegIntr(regionIntr)
 plt.savefig('intr_byRegion.png') #save plot to png file
 
+def query_relate():
+    #Related Queries
+    relatedQueries = pytrends.related_queries()
+    rq_ai = relatedQueries.get('Artificial Intelligence').get('rising') #display rising terms
+    rq_ai.to_csv('ai.csv') #save related queries to csv file
+
+    rq_facialRec = relatedQueries.get('Facial Recognition').get('rising')
+    rq_facialRec.to_csv('facial_rec.csv') 
+query_relate()
