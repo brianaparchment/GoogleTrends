@@ -13,3 +13,6 @@ pytrends = TrendReq(hl='en-US', timeout=5) #connect to google
 keyWords = ['Artificial Intelligence', 'Facial Recognition']
 #Timeframe is from today to the last 3 months
 pytrends.build_payload(kw_list=keyWords,timeframe='today 3-m', geo='US')
+
+#InterestByRegion
+regionIntr = pytrends.interest_by_region()
